@@ -1,5 +1,7 @@
 # Local stuff
 *.pdf
+._wordcount_selection.tex
+.DS_Store
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

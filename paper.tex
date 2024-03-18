@@ -1,0 +1,101 @@
+\documentclass[conference,peerreviewca]{IEEEtran}
+
+\ifCLASSOPTIONcompsoc
+  % IEEE Computer Society needs nocompress option
+  % requires cite.sty v4.0 or later (November 2003)
+  \usepackage[nocompress]{cite}
+\else
+  % normal IEEE
+  \usepackage{cite}
+\fi
+
+% \usepackage{arxiv} # uncomment for preprint
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+% \usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{graphicx}
+% \usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{hyperref}
+\usepackage{xr}
+\usepackage{subfig}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\score}{score}
+
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+\usepackage{placeins}
+% \usepackage{algpseudocode}
+
+% \algnewcommand\algorithmicforeach{\textbf{foreach}}
+% \algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+
+\usepackage{hyperref}
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+\makeatletter
+\newcommand{\linebreakand}{%
+  \end{@IEEEauthorhalign}
+  \hfill\mbox{}\par
+  \mbox{}\hfill\begin{@IEEEauthorhalign}
+}
+\makeatother
+
+\begin{document}
+  \title{De-noising Time Series Data}
+  % author names and affiliations
+  % use a multiple column layout for up to three different
+  % affiliations
+  \author{
+    \IEEEauthorblockN{Najib Ishaq}
+    \IEEEauthorblockA{najib\_ishaq@zoho.com}
+  }
+
+  \IEEEoverridecommandlockouts
+  \IEEEpubid{\makebox[\columnwidth]{978-1-6654-3902-2/21/\$31.00~\copyright2021 IEEE \hfill} \hspace{\columnsep}\makebox[\columnwidth]{ }}
+  % make the title area
+  \maketitle
+  \IEEEpubidadjcol
+  % this must go after the closing bracket ] following \twocolumn[ ...
+
+  \begin{abstract}
+    Abstract is written last
+  \end{abstract}
+
+  \IEEEpeerreviewmaketitle
+
+  \input{sections/introduction.tex}
+  \input{sections/related-works.tex}
+  \input{sections/methods.tex}
+  \input{sections/datasets.tex}
+  \input{sections/results.tex}
+  \input{sections/discussion.tex}
+
+  \section*{Acknowledgments}
+  Acknowledgments go here.
+
+  % \afterpage{\clearpage}
+  \FloatBarrier
+  \bibliographystyle{IEEEtran}
+  \bibliography{references}
+\end{document}
